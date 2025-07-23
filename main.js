@@ -44,3 +44,30 @@ ScrollReveal().reveal(".hotel__card", {
     //Hiện mờ mờ lần lượt
     interval: 500,
 });
+ScrollReveal().reveal(".steps__grid", {
+    ...scrollRevealOption,
+    //Hiện mờ mờ lần lượt
+    interval: 500,
+});
+
+//slider chay lien tuc
+const inspiration = document.querySelector(".inspiration__wrapper")
+console.log(inspiration.children)
+const inspirationImages = Array.from(inspiration.children)
+
+inspirationImages.forEach(item=>{
+    const duplicateNode = item.cloneNode(true);
+    duplicateNode.setAttribute("aria-hidden", true);
+    inspiration.appendChild(duplicateNode);
+})
+
+ScrollReveal().reveal(".property__card", {
+    ...scrollRevealOption,
+    //Hiện mờ mờ lần lượt
+    interval: 500,
+});
+ScrollReveal().reveal(".trip__card", {
+    ...scrollRevealOption,
+    //Hiện mờ mờ lần lượt
+    interval: 500,
+});

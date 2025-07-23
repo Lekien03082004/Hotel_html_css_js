@@ -161,7 +161,7 @@ nav {
     text-align: center;
 }
 
-.header__btns{
+.header__btns {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -173,22 +173,22 @@ nav {
     border: solid 2px var(--white);
 }
 
-.header__btns .btn:nth-child(1){
+.header__btns .btn:nth-child(1) {
     color: var(--text-dark);
     background-color: var(--white);
 }
 
-.header__btns .btn:nth-child(2){
+.header__btns .btn:nth-child(2) {
     background-color: transparent;
 }
 
-.header__btns .btn:nth-child(2):hover{
+.header__btns .btn:nth-child(2):hover {
     color: var(--text-dark);
     background-color: var(--white);
 }
 
 /* Blog hotel */
-.hotel{
+.hotel {
     background-color: var(--extra-light);
 }
 
@@ -198,13 +198,13 @@ nav {
     gap: 1rem;
 }
 
-.hotel__image{
+.hotel__image {
     margin-bottom: .5rem;
     position: relative;
     isolation: isolate;
 }
 
-.hotel__rating{
+.hotel__rating {
     position: absolute;
     top: 1rem;
     left: 1rem;
@@ -223,114 +223,421 @@ nav {
     color: goldenrod;
 }
 
-.hotel__image img{
-
-}
-
-.hotel__image img{
+.hotel__image img {
     border-radius: .75rem;
     box-shadow: 0 0 20px rgba(0, 0, 0, .1);
 }
 
-.hotel__card h4{
+.hotel__card h4 {
     margin-bottom: 0.5rem;
     font-size: 1.375rem;
     font-weight: 700;
     color: var(--text-dark);
 }
-.hotel__card p{
+
+.hotel__card p {
     font-size: 1.2rem;
     font-weight: 800;
     color: var(--primary-color);
 }
 
-.hotel__card p span{
+.hotel__card p span {
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--text-dark);
 }
 
-@media (width > 540px) {
-    .hotel__container .section__header{
-        text-align: left;
-    }
+.steps__grid {
+    margin-top: 4rem;
+    display: grid;
+    gap: 2rem 1rem;
+}
 
-    .hotel__grid{
-        grid-template-columns: repeat(2, 1fr);
+.steps__grid img {
+    max-width: 300px;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+}
+
+.steps__card h4 {
+    margin-bottom: .5rem;
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+/* Slider */
+.inspiration {
+    padding-block: 5rem;
+    background-color: var(--extra-light);
+    overflow: hidden;
+}
+
+.inspiration :is(.section__header, .section__description) {
+    padding-inline: 1rem;
+    margin-bottom: 1rem;
+}
+
+.inspiration__wrapper {
+    margin-top: 4rem;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    /* Cho anh chay trai sang phai */
+    animation: scroll-left 45s linear infinite;
+}
+
+.inspiration__card {
+    padding-inline: 1rem;
+    text-align: center;
+}
+
+.inspiration__card img {
+    margin-bottom: 1rem;
+    max-width: 225px;
+    border-radius: 100%;
+    border: 0.375rem solid var(--white);
+    box-shadow: 0 0 20 rgba(0, 0, 0, .1);
+}
+
+.inspiration__card h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.inspiration__card p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-light);
+}
+
+
+/* Cho anh chay trai sang phai */
+@keyframes scroll-left {
+    to {
+        transform: translateX(calc(-50%));
     }
 }
 
-@media (width > 786px) {
-    nav {
-    position: static;
-    padding-inline: 1rem;
-    padding-top: 2rem;
-    max-width: var(--max-width);
+/* Property */
+
+.property {
+    background-color: var(--extra-light);
+}
+
+.property__container .section__header {
+    margin-bottom: 1rem;
+}
+
+.property__grid {
+    margin-top: 4rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.property__card {
+    background-color: var(--white);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 0 20 rgba(0, 0, 0, .1);
+}
+
+.property__card__content {
+    padding: 1rem;
+}
+
+.property__card__conten h4 {
+    margin-bottom: 0.25rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.property__card__content p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.property__card__content h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.property__card__content h5 span {
+    display: inline-block;
+    margin-right: 0.5rem;
+    padding: 3px 6px;
+    background-color: var(--primary-color);
+    border-radius: .25rem;
+
+}
+
+/* Trip */
+
+.trip__grid {
+    margin-top: 4rem;
+    display: grid;
+    gap: 2rem 1rem;
+}
+
+.trip__card {
+    max-width: 400px;
     margin-inline: auto;
+}
+
+.trip__card img {
+    margin-bottom: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20 rgba(0, 0, 0, .1);
+}
+
+.trip__card h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.trip__card p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.discount {
+    position: relative;
+    isolation: isolate;
+}
+
+.discount::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background-color: var(--extra-light);
+    z-index: -1;
+}
+
+.discount__container {
+    padding: 5rem 1rem;
+    display: grid;
+    gap: 2rem;
+    background-image: linear-gradient(to right,
+            rgba(196, 156, 116, .9),
+            rgba(196, 156, 116, .9)),
+        url(assets/discount.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    box-shadow: 0 0 20 rgba(0, 0, 0, .2);
+}
+
+.discount__content .section__header {
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.discount__content .section__description {
+    color: var(--white);
+}
+
+.discount__btns {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 1rem;
-  }
+}
 
-  .nav__header {
-    flex: 1;
-    padding: 0;
+.discount__btns .btn {
+    padding: calc(0.75rem - 4px) calc(1.5rem - 4px);
+    border: 2px solid var(--white);
+}
+
+.discount__btns .btn:nth-child(1) {
     background-color: transparent;
-  }
+}
 
-  .nav__logo a {
-    font-size: 1.75rem;
-  }
+.discount__btns .btn:nth-child(1):hover {
+    color: var(--text-dark);
+    background-color: var(--white);
+}
 
-  .nav__menu__btn {
-    display: none;
-  }
+.discount__btns .btn:nth-child(2) {
+    color: var(--text-dark);
+    background-color: var(--white);
+}
+/* Footer  */
+footer{
+    background-color: var(--extra-light);
+}
+.footer__container{
+    display: grid;
+    gap: 4rem 2rem;
+}
+.footer__logo{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+.footer__links {
+    display: grid;
+    gap: 1rem;
+}
+.footer__links a{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
 
-  .nav__links {
-    position: static;
-    width: fit-content;
-    padding: 0;
-    flex-direction: row;
-    background-color: transparent;
-    transform: none !important;
-  }
-
-  .nav__links a:hover {
+.footer__links a:hover{
     color: var(--primary-color);
-  }
+}
 
-  .header__container {
-    grid-template-columns: 4fr 2fr;
-  }
+.footer__bar {
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--text-light);
+    text-align: center;
+}
+@media (width > 540px) {
+    .hotel__container .section__header {
+        text-align: left;
+    }
 
-  .header__container h1 {
-    text-align: left;
-    font-size: 6rem;
-    line-height: 6.5rem;
-  }
+    .hotel__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-  .header__content {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+    .steps__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-  .header__content .section__description {
-    text-align: left;
-  }
+    .property__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-  .header__btns {
-    justify-content: flex-start;
-  }
-  .hotel__grid{
+    .trip__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer__container{
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+
+
+@media (width > 786px) {
+    nav {
+        position: static;
+        padding-inline: 1rem;
+        padding-top: 2rem;
+        max-width: var(--max-width);
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .nav__header {
+        flex: 1;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .nav__logo a {
+        font-size: 1.75rem;
+    }
+
+    .nav__menu__btn {
+        display: none;
+    }
+
+    .nav__links {
+        position: static;
+        width: fit-content;
+        padding: 0;
+        flex-direction: row;
+        background-color: transparent;
+        transform: none !important;
+    }
+
+    .nav__links a:hover {
+        color: var(--primary-color);
+    }
+
+    .header__container {
+        grid-template-columns: 4fr 2fr;
+    }
+
+    .header__container h1 {
+        text-align: left;
+        font-size: 6rem;
+        line-height: 6.5rem;
+    }
+
+    .header__content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .header__content .section__description {
+        text-align: left;
+    }
+
+    .header__btns {
+        justify-content: flex-start;
+    }
+
+    .hotel__grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .steps__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .property__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .trip__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .discount__container{
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+    .discount__content :is(.section__header, .section__description){
+        text-align: left;
+    }
+    .discount__btns{
+        justify-content: flex-end;
+    }
+    .footer__container {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
 @media (width > 1024px) {
-    .hotel__grid{
+    .hotel__grid {
         gap: 1.5rem;
+    }
+
+    .steps__grid {
+        gap: 1.5rem;
+    }
+    .discount__container{
+        padding-inline: 4rem;
     }
 }
